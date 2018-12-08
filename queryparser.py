@@ -76,7 +76,7 @@ class QuerySetFilter:
         field = parts[0].strip()
 
         if len(parts) == 3:
-            lookup_type = self.OPERATORS.get(parts[1])
+            lookup_type = self.OPERATORS.get(parts[1].strip())
             value = get_value(parts[-1].strip())
 
         return (field, lookup_type, value)
